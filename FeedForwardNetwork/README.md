@@ -14,7 +14,7 @@ w<sub>i</sub><sup>new</sup> = w<sub>i</sub><sup>old</sup> - Learning_rate * [par
 
 
 <h3> 3) How are weights initialized? </h3>
-            1. Weights are initialized as small random values. <br/>
+            1. Weights are initialized as small random values from standard normal distribution between -1,1. <br/>
 
 
 <h3> 4) What is "loss" in a neural network? </h3>
