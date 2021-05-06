@@ -1,4 +1,4 @@
-<h3> 1) What is a neural network neuron? </h3> <br/>
+<h3> 1) What is a neural network neuron? </h3> 
       1. A neural network neuron is an unit that holds a weight and an activation function. <br/>
       2. Each neuron has both input and output connection. <br/>
       3. With given weight(w) and activation function(tanh), output of a neuron is calculated as <br/>
@@ -6,7 +6,7 @@
       4. The activation fnction can be tanh, sigmoid, ReLU, etc.
 
 
-<b font size =28> 2) What is the use of the learning rate? </b> <br/>
+<h3> 2) What is the use of the learning rate? </h3> <br/>
 
 
 
