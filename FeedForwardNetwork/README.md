@@ -7,14 +7,14 @@
 
 
 <h3> 2) What is the use of the learning rate? </h3> 
-           1. Learning rate is a configurable parameter used to train the neural network.
-           2. It cannot be too small or too big. It should be an optimal value.
-           3. Learning rate is used as follows
-w<sup>new</sup><sub>i</sub> = w<sup>old</sup><sub>i</sub> - Learning_rate * [partial_derivative(Error)/ partial_derivative(w<sup>old</sup><sub>i</sub>)]
+           1. Learning rate is a configurable parameter used to train the neural network. <br/>
+           2. It cannot be too small or too big. It should be an optimal value. <br/>
+           3. Learning rate is used as follows <br/>
+w<sub>i</sub><sup>new</sup> = w<sub>i</sub><sup>old</sup> - Learning_rate * [partial_derivative(Error)/ partial_derivative(w<sub>i</sub><sup>old</sup>)]
 
 
 <h3> 3) How are weights initialized? </h3>
-
+            1. Weights are initialized as small random values.
 
 
 <h3> 4) What is "loss" in a neural network? </h3>
