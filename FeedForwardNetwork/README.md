@@ -1,23 +1,23 @@
-## 1) What is a neural network neuron? <br />
+### 1) What is a neural network neuron? <br />
       1. A neural network neuron is an unit that holds a weight and an activation function. <br /> 
       2. Each neuron has both input and output connection. <br />
       3. Output of a neuron is calculated as <br />
       z=tanh(∑<sup>n</sup><sub>i=1</sub> x<sub>i</sub>w<sub>i</sub>+b)  , n- number of connections, 
 
 
-## 2) What is the use of the learning rate?
+### 2) What is the use of the learning rate?
 
 
 
-## 3) How are weights initialized?
+### 3) How are weights initialized?
 
 
 
-## 4) What is "loss" in a neural network?
+### 4) What is "loss" in a neural network?
 
 
 
-## 5)  What is the "chain rule" in gradient flow?
+### 5)  What is the "chain rule" in gradient flow?
 
 
 
