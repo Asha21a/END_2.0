@@ -1,4 +1,4 @@
-<b><font size =20> 1) What is a neural network neuron? </font></b> <br/>
+<h3> 1) What is a neural network neuron? </h3> <br/>
       1. A neural network neuron is an unit that holds a weight and an activation function. <br/>
       2. Each neuron has both input and output connection. <br/>
       3. With given weight(w) and activation function(tanh), output of a neuron is calculated as <br/>
