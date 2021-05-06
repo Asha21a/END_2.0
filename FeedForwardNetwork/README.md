@@ -1,4 +1,4 @@
-### 1) What is a neural network neuron?
+### 1) What is a neural network neuron? ##
     <p>  1. A neural network neuron is an unit that holds a weight and an activation function. 
       2. Each neuron has both input and output connection. 
       3. Output of a neuron is calculated as 
