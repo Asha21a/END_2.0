@@ -31,6 +31,22 @@ E_total = E1+ E2 <br/>
 ∂a_o1/∂o1 = ∂(σ(o1))/∂o1 = σ(o1)*(1-σ(o1)) = a_o1 * (1-a_o1)
 ∂o1/∂w5 = a_h1
 
+∂E_t/∂w5 = (a_o1 - t1) * a_o1 * (1-a_o1) * a_h1
+∂E_t/∂w6 = (a_o1 - t1) * a_o1 * (1-a_o1) * a_h2
+∂E_t/∂w7 = (a_o2 - t2) * a_o2 * (1-a_o2) * a_h1
+∂E_t/∂w8 = (a_o2 - t2) * a_o2 * (1-a_o2) * a_h2
+
+∂E1/∂a_h2 = 
+
+
+∂E_t/∂w1 = (∂ET/∂a_o1) * (∂a_o1/∂o1) * (∂o1/∂a-h1)* (∂a_h1/∂h1) * (∂h1/∂w1)
+∂E_t/∂w1 =  (∂ET/∂a-h1)* (∂a_h1/∂h1) * (∂h1/∂w1)
+∂E_t/∂w1 =  (∂ET/∂a-h1)* a_h1 * (1-a_h1) * (∂h1/∂w1)
+∂E_t/∂w1 =  (∂ET/∂a-h1)* a_h1 * (1-a_h1) * i1
+∂E_t/∂w2 =  (∂ET/∂a-h1)* a_h1 * (1-a_h1) * i2
+∂E_t/∂w3 =  (∂ET/∂a-h2)* a_h2 * (1-a_h2) * i1
+∂E_t/∂w4 =  (∂ET/∂a-h2)* a_h2 * (1-a_h2) * i2
+
 
 <b>Learning Rate = 0.1 </b> <br/>
 
