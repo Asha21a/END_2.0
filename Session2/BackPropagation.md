@@ -26,17 +26,38 @@ w2 = 0.2 <br/>
 w3 = 0.25 <br/>
 w4 = 0.3 <br/>
 
+h1 takes the route of w1 from i1 and w2 from i2 <br/>
 h1 = w1*i1 + w2*i2 = ![image](https://user-images.githubusercontent.com/83409496/118169416-8a8ae180-b446-11eb-8552-85e571fabe37.png) <br/>
+
+h2 takes the route of w3 from i1 and w4 from i2 <br/>
 h2 = w3*i1 + w4*i2 = ![image](https://user-images.githubusercontent.com/83409496/118169579-bc03ad00-b446-11eb-98f7-16ceb4c0d6a4.png) <br/>
+
 a_h1 = σ(h1) = 1/(1+ exp(-h1)) = ![image](https://user-images.githubusercontent.com/83409496/118169686-da69a880-b446-11eb-85f1-31dae544d597.png) <br/>
 a_h2=σ(h2) = 1/(1+exp(-h2)) = ![image](https://user-images.githubusercontent.com/83409496/118169765-f1a89600-b446-11eb-81f7-e1fd0520f7a7.png) <br/>
+
+o1 takes the route of w5 from a_h1 and w6 from a_h2 <br/>
 o1 = w5*a_h1 + w6*a_h2 = ![image](https://user-images.githubusercontent.com/83409496/118169924-21579e00-b447-11eb-9014-492f499df22a.png) <br/>
+
+o2 takes the route of w7 from a_h1 and w8 from a_h2 <br/>
 o2 = w7*a_h1 + w8*a_h2 = ![image](https://user-images.githubusercontent.com/83409496/118169958-2e748d00-b447-11eb-9277-de6f71cb96a6.png) <br/>
+
 a_o1 = σ(o1)=1/(1+exp(-o1)) = ![image](https://user-images.githubusercontent.com/83409496/118170028-40eec680-b447-11eb-9673-4fee7244564a.png) <br/>
 a_o2 = σ(o2)=1/(1exp(-o2)) = ![image](https://user-images.githubusercontent.com/83409496/118170058-4d731f00-b447-11eb-9cfe-e0ff31661f46.png) <br/>
 E1 = ½ * (t1-a_o1)² = ![image](https://user-images.githubusercontent.com/83409496/118170098-582db400-b447-11eb-8d53-9e9fb9f16668.png) <br/>
 E1 = ½ * (t2-a_o2)² = ![image](https://user-images.githubusercontent.com/83409496/118170139-62e84900-b447-11eb-8826-6f6f5f250920.png) <br/>
 E_total = E1+ E2 = ![image](https://user-images.githubusercontent.com/83409496/118170188-6ed40b00-b447-11eb-802d-759acb67441e.png) <br/>
+
+By chain rule, ∂E_t/∂w5 takes the route as <br/>
+∂E_t/∂w5 = ∂E1/∂a_o1 * ∂a_o1/∂o1 * ∂o1/∂w5
+
+By chain rule, ∂E_t/∂w6 takes the route as <br/>
+∂E_t/∂w6 = ∂E1/∂a_o1 * ∂a_o1/∂o1 * ∂o1/∂w6
+
+By chain rule, ∂E_t/∂w7 takes the route as <br/>
+∂E_t/∂w7 = ∂E2/∂a_o2 * ∂a_o2/∂o2 * ∂o2/∂w7
+
+By chain rule, ∂E_t/∂w8 takes the route as <br/>
+∂E_t/∂w8 = ∂E2/∂a_o2 * ∂a_o2/∂o2 * ∂o2/∂w8
 
 ∂E1/∂a_o1 =∂ (1/2 *(t1-a_o1)^2)/∂a_o1 = (t1-a_o1)*(-1) = a_o1 - t1 <br/>
 ∂a_o1/∂o1 = ∂(σ(o1))/∂o1 = σ(o1)*(1-σ(o1)) = a_o1 * (1-a_o1) <br/>
@@ -52,7 +73,7 @@ E_total = E1+ E2 = ![image](https://user-images.githubusercontent.com/83409496/1
 ∂E_t/∂a_h1 = ∂(E1+E2)/∂a_h1 <br/>
 ∂E1/∂a_h1 = (∂E1/∂a_o1) * (∂a_01/∂o1) * (∂o1/∂a_h1) = (a_o1 - t1) * (a_o1*(1-a_o1)) * w5 + (a_o2 - t2) * (a_o2*(1-a_o2)) * w7 <br/>
 
-
+By chain rule, ∂E_t/∂w1 takes the route as <br/>
 ∂E_t/∂w1 = (∂ET/∂a_o1) * (∂a_o1/∂o1) * (∂o1/∂a-h1)* (∂a_h1/∂h1) * (∂h1/∂w1) <br/>
 ∂E_t/∂w1 =  (∂ET/∂a_h1)* (∂a_h1/∂h1) * (∂h1/∂w1) <br/>
 ∂E_t/∂w1 =  (∂ET/∂a_h1)* a_h1 * (1-a_h1) * (∂h1/∂w1) <br/>
@@ -68,6 +89,10 @@ E_total = E1+ E2 = ![image](https://user-images.githubusercontent.com/83409496/1
 ∂E_t/∂w3 = (((a_o2 - t2) * (a_o2*(1-a_o2)) * w8) + ((a_o1 - t1) * (a_o1*(1-a_o1)) * w6)) * a_h2 * (1-a_h2) * i1 = ![image](https://user-images.githubusercontent.com/83409496/118171665-19006280-b449-11eb-941d-6fd8aa73f129.png) <br/>
 
 ∂E_t/∂w4 = (((a_o2 - t2) * (a_o2*(1-a_o2)) * w8) + ((a_o1 - t1) * (a_o1*(1-a_o1)) * w6)) * a_h2 * (1-a_h2) * i2 = ![image](https://user-images.githubusercontent.com/83409496/118171752-33d2d700-b449-11eb-98dd-ebdfd7ad773b.png) <br/>
+
+
+![image](https://user-images.githubusercontent.com/83409496/118173591-667dcf00-b44b-11eb-8138-7a1053908e8b.png)
+
 
 <b>Learning Rate = 0.1 </b> <br/>
 
