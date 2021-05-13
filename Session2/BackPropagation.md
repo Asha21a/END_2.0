@@ -15,10 +15,20 @@
 
 
 <b>Steps: </b><br/>
-h1 = w1*i1 + w2*i2 <br/>
-h2 = w3*i1 + w4*i2 <br/>
-a_h1 = σ(h1) = 1/(1+ exp(-h1)) <br/>
-a_h2=σ(h2) = 1/(1+exp(-h2)) <br/>
+
+t1 = 0.01 <br/>
+t2 = 0.99 <br/>
+i1 = 0.05 <br/>
+i2 = 0.1 <br/>
+w1 = 0.15 <br/>
+w2 = 0.2 <br/>
+w3 = 0.25 <br/>
+w4 = 0.3 <br/>
+
+h1 = w1*i1 + w2*i2 = ![image](https://user-images.githubusercontent.com/83409496/118169416-8a8ae180-b446-11eb-8552-85e571fabe37.png) <br/>
+h2 = w3*i1 + w4*i2 = ![image](https://user-images.githubusercontent.com/83409496/118169579-bc03ad00-b446-11eb-98f7-16ceb4c0d6a4.png) <br/>
+a_h1 = σ(h1) = 1/(1+ exp(-h1)) = ![image](https://user-images.githubusercontent.com/83409496/118169686-da69a880-b446-11eb-85f1-31dae544d597.png) <br/>
+a_h2=σ(h2) = 1/(1+exp(-h2)) = ![image](https://user-images.githubusercontent.com/83409496/118169765-f1a89600-b446-11eb-81f7-e1fd0520f7a7.png) <br/>
 o1 = w5*a_h1 + w6*a_h2 <br/>
 o2 = w7*a_h1 + w8*a_h2 <br/>
 a_o1 = σ(o1)=1/(1+exp(-o1)) <br/>
