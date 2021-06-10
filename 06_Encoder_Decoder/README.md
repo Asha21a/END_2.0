@@ -11,3 +11,5 @@
   <li>word from a sentence +last hidden vector -> encoder -> single vector</li>
   <li>single vector + last hidden vector -> decoder -> single vector</li>
   <li>single vector -> FC layer -> Prediction</li>
+
+  <h2><b>Solution</b></h2>
