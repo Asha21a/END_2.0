@@ -14,4 +14,4 @@
 
   <h2><b>Solution</b></h2>
   
-  <b> Need some more time to complete, please!</b>
+ 
